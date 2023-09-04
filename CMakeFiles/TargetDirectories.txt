@@ -1,3 +1,0 @@
-/home/edauandes/Tareas/Tarea 1/CMakeFiles/tarea1.dir
-/home/edauandes/Tareas/Tarea 1/CMakeFiles/edit_cache.dir
-/home/edauandes/Tareas/Tarea 1/CMakeFiles/rebuild_cache.dir

@@ -55,7 +55,7 @@ int main(int argc, char** argv){
                 auto start = std::chrono::high_resolution_clock::now();
                 if(!strcmp(argv[2], "I")){
                     cout << "ejecutando InsertSort..." << endl;
-                    sort::selectionSort(ruts, lines);
+                    sort::insertionSort(ruts, lines);
                 }
                 if(!strcmp(argv[2], "M")){
                     cout << "ejecutando MergeSort..." << endl;
