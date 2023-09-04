@@ -150,4 +150,6 @@ CMakeFiles/tarea1.dir/edaT1.cpp.o: \
  /usr/include/c++/11/bits/fstream.tcc /usr/include/string.h \
  /usr/include/strings.h /usr/include/c++/11/stdlib.h \
  /home/edauandes/Tareas/Tarea\ 1/sort.hpp \
- /home/edauandes/Tareas/Tarea\ 1/utils.hpp
+ /home/edauandes/Tareas/Tarea\ 1/utils.hpp /usr/include/c++/11/chrono \
+ /usr/include/c++/11/ratio /usr/include/c++/11/limits \
+ /usr/include/c++/11/ctime /usr/include/c++/11/bits/parse_numbers.h
