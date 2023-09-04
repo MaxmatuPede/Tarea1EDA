@@ -1,10 +1,10 @@
 #include <iostream>
 #include "sort.hpp"
 #include "utils.hpp"
-
+using namespace std;
 namespace sort{
 
-	void selectionSort(float* A, int n){
+	void selectionSort(int* A, int n){
 		int smallest = 0;
 		int i = 0;
 		int j = 0;
@@ -19,7 +19,7 @@ namespace sort{
 		}
 	}
 
-	int split_qs(float* A, int i, int j){
+	int split_qs(int* A, int i, int j){
 		/***
 		 * split for quicksort
 		 * i,j are the endpoints
@@ -48,7 +48,7 @@ namespace sort{
 		return p;
 	}
 
-	void quickSort(float* A, int i, int j){
+	void quickSort(int* A, int i, int j){
 		if (i < j){
 			int k = split_qs(A, i, j);
 			quickSort(A, i, k-1);
@@ -56,27 +56,8 @@ namespace sort{
 		}
 	}
 
-	void quickSort(float* A, int n){
+	void quickSort(int* A, int n){
 		quickSort(A, 0, n - 1);
-	}
-
-	int  k_smallest(float* A, int i, int j, int k){
-		int p = split_qs(A, i, j);
-		int val = 0;
-		if (k == p){
-			val = A[p];
-		}
-		else if (k < p){
-			val = k_smallest(A, i, p-1, k);
-		}
-		else{
-			val = k_smallest(A, p+1, j, k);
-		}
-		return val;
-	}
-
-	int  k_smallest(float* A, int n, int k){
-		return k_smallest(A, 0, n-1, k);
 	}
 
 }

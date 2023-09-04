@@ -4,9 +4,15 @@
 #include <stdlib.h>
 #include "sort.hpp"
 #include "utils.hpp"
+#include <chrono>
+#include <ctime>
 using namespace std;
 
-
+long getElapsedTime(std::chrono::time_point<std::chrono::high_resolution_clock> t1,
+		std::chrono::time_point<std::chrono::high_resolution_clock> t2){
+	auto int_ms = std::chrono::duration_cast<std::chrono::microseconds>(t2 - t1);
+	return static_cast<long>(int_ms.count());
+}
 
 int main(int argc, char** argv){ 
     if (argc != 3){
@@ -40,13 +46,33 @@ int main(int argc, char** argv){
                         rut.pop_back();
                     }
                     if(!rut.empty()){
-                        ruti = stoi(rut);
+                        ruti = stof(rut);
                         ruts[lines] = ruti;
                     }
                     lines ++;
                 }
                 fileistream.close();
-                
+                auto start = std::chrono::high_resolution_clock::now();
+                if(!strcmp(argv[2], "I")){
+                    cout << "ejecutando InsertSort..." << endl;
+                    sort::selectionSort(ruts, lines);
+                }
+                if(!strcmp(argv[2], "M")){
+                    cout << "ejecutando MergeSort..." << endl;
+                    sort::selectionSort(ruts, lines);
+                }
+                if(!strcmp(argv[2], "Q")){
+                    cout << "ejecutando QuickSort..." << endl;
+                    sort::quickSort(ruts, lines);
+                }
+                if(!strcmp(argv[2], "R")){
+                    cout << "ejecutando RadixSort..." << endl;
+                    sort::selectionSort(ruts, lines);
+                }
+                auto end = std::chrono::high_resolution_clock::now();
+                long elapsed =  getElapsedTime(start, end);
+                cout << "El tiempo que tardo fue " << elapsed << " microsegundos" << endl;
+
                 delete[] ruts;
             }
         }
