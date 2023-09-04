@@ -1,0 +1,1 @@
+/usr/bin/g++ CMakeFiles/tarea1.dir/edaT1.cpp.o CMakeFiles/tarea1.dir/sort.cpp.o CMakeFiles/tarea1.dir/utils.cpp.o -o tarea1 
