@@ -31,6 +31,7 @@ int main(int argc, char** argv){
                 cout << "Algoritmo de ordenamiento de la Teleton, osea invalido" << endl;
             }
             else{
+            	cout << "Leyendo archivo de ruts..." << endl;
                 int lines=0;
                 string rut;
                 while(fileistream.good()) if(fileistream.get()=='\n') lines++;
@@ -54,25 +55,25 @@ int main(int argc, char** argv){
                 fileistream.close();
                 auto start = std::chrono::high_resolution_clock::now();
                 if(!strcmp(argv[2], "I")){
-                    cout << "ejecutando InsertSort..." << endl;
+                    cout << "Ejecutando InsertSort..." << endl;
                     sort::insertionSort(ruts, lines);
                 }
                 if(!strcmp(argv[2], "M")){
-                    cout << "ejecutando MergeSort..." << endl;
+                    cout << "Ejecutando MergeSort..." << endl;
                     sort::mergeSort(ruts, 0, lines);
                 }
                 if(!strcmp(argv[2], "Q")){
-                    cout << "ejecutando QuickSort..." << endl;
+                    cout << "Ejecutando QuickSort..." << endl;
                     sort::quickSort(ruts, lines);
                 }
                 if(!strcmp(argv[2], "R")){
-                    cout << "ejecutando RadixSort..." << endl;
+                    cout << "Ejecutando RadixSort..." << endl;
                     sort::radixSort(ruts, lines);
                 }
                 auto end = std::chrono::high_resolution_clock::now();
                 long elapsed =  getElapsedTime(start, end);
                 cout << "El tiempo que tardo fue " << elapsed << " microsegundos" << endl;
-
+                cout << "Escribiendo archivo ordenado..." << endl;
                 file_sort = file_sort + ".sorted";
                 ofstream outputFile(file_sort);
                 if (!outputFile.is_open()) {

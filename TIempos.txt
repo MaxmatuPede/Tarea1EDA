@@ -1,0 +1,45 @@
+son microsegundos
+Insert)
+100       datos= 203
+1000      datos= 8592
+10000     datos= 136640
+50000     datos= 2081330
+100000    datos= 6995388
+500000    datos= 152394428
+1000000   datos= 618757827
+10000000  datos= + de 3.6e+10
+50000000  datos= no corrido
+100000000 datos= no corrido
+Merge)
+100       datos= 251
+1000      datos= 3094
+10000     datos= 8892
+50000     datos= 23976
+100000    datos= 27515
+500000    datos= 118103
+1000000   datos= 238992
+10000000  datos= 2639684
+50000000  datos= 13673105
+100000000 datos= 35019373
+Quick)
+100       datos= 321
+1000      datos= 531
+10000     datos= 5561
+50000     datos= 10290
+100000    datos= 17089
+500000    datos= 112571
+1000000   datos= 229929
+10000000  datos= 2227149
+50000000  datos= 12507772
+100000000 datos= 24726675
+Radix)
+100       datos= 3689
+1000      datos= 1981
+10000     datos= 1855
+50000     datos= 43907
+100000    datos= 27941
+500000    datos= 97047
+1000000   datos= 170446
+10000000  datos= 1962056
+50000000  datos= 8643751
+100000000 datos= 17363115
