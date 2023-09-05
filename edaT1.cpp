@@ -73,6 +73,16 @@ int main(int argc, char** argv){
                 long elapsed =  getElapsedTime(start, end);
                 cout << "El tiempo que tardo fue " << elapsed << " microsegundos" << endl;
 
+                file_sort = file_sort + ".sorted";
+                ofstream outputFile(file_sort);
+                if (!outputFile.is_open()) {
+                    cerr << "Unable to open the file." << endl;
+                    return 0;
+                }
+                for (int num = 0; num < lines-1; num++) {
+                    outputFile << ruts[num] << '\n';
+                }
+                outputFile.close();
                 delete[] ruts;
             }
         }

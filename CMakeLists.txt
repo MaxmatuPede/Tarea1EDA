@@ -11,7 +11,7 @@ set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 
-add_executable(tarea1 edaT1.cpp sort.cpp utils.cpp)
+add_executable(sort_ruts edaT1.cpp sort.cpp utils.cpp)
 
 
 # add the executable
