@@ -82,9 +82,9 @@ namespace sort{
 		auto *rightA = new int[subA2];
 		
 		for (auto i = 0; i< subA1; i++)
-			leftA[i] = A[left + 1];
+			leftA[i] = A[left + i];
 		for (auto j = 0; j< subA2; j++)
-			rightA[j] = A[mid + 1 - j];
+			rightA[j] = A[mid + 1 + j];
 
 		auto indexSubA1 = 0, indexSubA2 = 0;
 		int indexMergA = left;
@@ -116,7 +116,7 @@ namespace sort{
 		delete[] leftA;
 		delete[] rightA;
 	}
-	
+
 	void mergeSort(int* A, int const begin, int const end){
 	if(begin >=end){
 		return;
@@ -126,9 +126,4 @@ namespace sort{
 	mergeSort(A, mid + 1, end);
 	merge(A, begin, mid, end);
 	}
-
-
 }
-
-
-

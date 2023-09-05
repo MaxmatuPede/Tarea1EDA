@@ -59,7 +59,7 @@ int main(int argc, char** argv){
                 }
                 if(!strcmp(argv[2], "M")){
                     cout << "ejecutando MergeSort..." << endl;
-                    sort::selectionSort(ruts, lines);
+                    sort::mergeSort(ruts, 0, lines);
                 }
                 if(!strcmp(argv[2], "Q")){
                     cout << "ejecutando QuickSort..." << endl;
