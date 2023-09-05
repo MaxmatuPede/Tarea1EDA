@@ -129,7 +129,8 @@ namespace sort{
 
 
 	void countingSort(int* A, int n, int exp){
-		int out[n], i, count[10] = {0};
+		int *out = new int[n];
+		int i, count[10] = {0};
 
 		for (i=0; i < n; i++){
 			count[(A[i]/exp)%10]++;
@@ -144,6 +145,7 @@ namespace sort{
 		for (i=0; i< n; i++){
 			A[i]= out[i];
 		}
+		delete[] out;
 	}
 
 	void radixSort(int* A, int n){
