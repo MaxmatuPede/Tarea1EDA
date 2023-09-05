@@ -118,12 +118,39 @@ namespace sort{
 	}
 
 	void mergeSort(int* A, int const begin, int const end){
-	if(begin >=end){
-		return;
+		if(begin >=end){
+			return;
+		}
+		int mid = begin + (end - begin)/2;
+		mergeSort(A, begin, mid);
+		mergeSort(A, mid + 1, end);
+		merge(A, begin, mid, end);
 	}
-	int mid = begin + (end - begin)/2;
-	mergeSort(A, begin, mid);
-	mergeSort(A, mid + 1, end);
-	merge(A, begin, mid, end);
+
+
+	void countingSort(int* A, int n, int exp){
+		int out[n], i, count[10] = {0};
+
+		for (i=0; i < n; i++){
+			count[(A[i]/exp)%10]++;
+		}
+		for (i=1; i<10 ; i++){
+			count[i] += count[i-1];
+		}
+		for (i= n-1 ; i >= 0; i--){
+			out[count[(A[i]/exp)%10]-1] = A[i];
+			count[(A[i]/exp)%10]--;
+		}
+		for (i=0; i< n; i++){
+			A[i]= out[i];
+		}
 	}
+
+	void radixSort(int* A, int n){
+		int m = maxValue(A, n);
+		for (int exp = 1; m/exp > 0; exp *= 10){
+			countingSort(A, n, exp);
+		}
+	}
+
 }

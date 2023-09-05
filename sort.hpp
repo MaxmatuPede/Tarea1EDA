@@ -9,6 +9,8 @@ namespace sort {
 	void insertionSort(int* A, int n);
 	void merge(int* A, int const left, int const mid, int const right);
 	void mergeSort(int* A, int const begin, int const end);
+	void countingSort(int* A, int n, int exp);
+	void radixSort(int* A, int n);
 }
 
 #endif

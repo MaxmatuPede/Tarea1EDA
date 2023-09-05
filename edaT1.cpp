@@ -67,7 +67,7 @@ int main(int argc, char** argv){
                 }
                 if(!strcmp(argv[2], "R")){
                     cout << "ejecutando RadixSort..." << endl;
-                    sort::selectionSort(ruts, lines);
+                    sort::radixSort(ruts, lines);
                 }
                 auto end = std::chrono::high_resolution_clock::now();
                 long elapsed =  getElapsedTime(start, end);
